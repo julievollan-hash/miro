@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karriereplattform – Project Background</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --off-white: #FAFAFA;
+            --warm-white: #F8F6F4;
+            --light-grey: #E8E6E3;
+            --mid-grey: #9A9894;
+            --dark-grey: #3D3D3D;
+            --black: #1A1A1A;
+            --red: #E63946;
+            --red-dark: #C1121F;
+            --red-light: rgba(230, 57, 70, 0.08);
+            --teal: #0D9488;
+            --teal-light: rgba(13, 148, 136, 0.1);
+            --violet: #8B5CF6;
+            --violet-light: rgba(139, 92, 246, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--dark-grey);
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Typography */
+        h1 {
+            font-family: 'Instrument Serif', serif;
+            font-size: clamp(42px, 6vw, 72px);
+            font-weight: 400;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            color: var(--black);
+        }
+
+        h1 em {
+            font-style: italic;
+            color: var(--red);
+        }
+
+        h2 {
+            font-family: 'Instrument Serif', serif;
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            color: var(--black);
+            margin-bottom: 24px;
+        }
+
+        h3 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 24px;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+            color: var(--black);
+            margin-bottom: 16px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .section-label {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--red);
+            margin-bottom: 16px;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 80px 0;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: -100px;
+            right: -200px;
+            width: 600px;
+            height: 600px;
+            opacity: 0.4;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            color: var(--mid-grey);
+            margin-top: 24px;
+            max-width: 560px;
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-divider {
+            height: 1px;
+            background: var(--light-grey);
+            margin: 0 auto;
+            max-width: 900px;
+        }
+
+        .warm-section {
+            background: var(--warm-white);
+        }
+
+        .dark-section {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .dark-section h2,
+        .dark-section h3 {
+            color: var(--white);
+        }
+
+        .dark-section .section-label {
+            color: var(--red);
+        }
+
+        /* Numbered sections */
+        .numbered-section {
+            display: flex;
+            gap: 32px;
+            margin-bottom: 48px;
+        }
+
+        .numbered-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-number {
+            font-family: 'Instrument Serif', serif;
+            font-size: 48px;
+            color: var(--light-grey);
+            line-height: 1;
+            min-width: 60px;
+        }
+
+        .section-content {
+            flex: 1;
+        }
+
+        .section-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Highlight box */
+        .highlight-box {
+            background: var(--red-light);
+            border-left: 3px solid var(--red);
+            padding: 24px 28px;
+            margin: 32px 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        /* Cards grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: var(--white);
+            border: 1px solid var(--light-grey);
+            border-radius: 12px;
+            padding: 28px;
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .card h4 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 12px;
+            color: var(--black);
+        }
+
+        .card p {
+            font-size: 15px;
+            color: var(--mid-grey);
+            margin-bottom: 0;
+        }
+
+        /* SVG Container */
+        .svg-container {
+            margin: 48px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .svg-container svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Outcomes box */
+        .outcomes-box {
+            background: var(--teal-light);
+            border-radius: 16px;
+            padding: 40px;
+            margin-top: 40px;
+        }
+
+        .outcomes-box h3 {
+            margin-bottom: 24px;
+        }
+
+        .outcome-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .outcome-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .outcome-check {
+            width: 24px;
+            height: 24px;
+            background: var(--teal);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .outcome-check svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .outcome-item p {
+            margin-bottom: 0;
+        }
+
+        /* Table */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 32px 0;
+        }
+
+        .data-table th,
+        .data-table td {
+            text-align: left;
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--light-grey);
+        }
+
+        .data-table th {
+            font-weight: 500;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--mid-grey);
+            background: var(--off-white);
+        }
+
+        .data-table td {
+            font-size: 15px;
+        }
+
+        .dark-section .data-table th {
+            background: rgba(255,255,255,0.05);
+            color: var(--mid-grey);
+        }
+
+        .dark-section .data-table td {
+            border-color: rgba(255,255,255,0.1);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 60px 0;
+            text-align: center;
+            color: var(--mid-grey);
+            font-size: 14px;
+        }
+
+        /* Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(32px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* KPI Grid */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .kpi-category h3 {
+            font-size: 18px;
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--light-grey);
+        }
+
+        .kpi-item {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 20px;
+            align-items: flex-start;
+        }
+
+        .kpi-metric {
+            font-family: 'Instrument Serif', serif;
+            font-size: 20px;
+            color: var(--teal);
+            min-width: 70px;
+            font-weight: 400;
+        }
+
+        .kpi-description strong {
+            display: block;
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--black);
+            margin-bottom: 4px;
+        }
+
+        .kpi-description span {
+            font-size: 14px;
+            color: var(--mid-grey);
+            line-height: 1.5;
+        }
+
+        /* Initiative Overview */
+        .initiative-overview {
+            background: var(--white);
+            border: 1px solid var(--light-grey);
+            border-radius: 12px;
+            padding: 32px;
+            margin-top: 40px;
+        }
+
+        .initiative-row {
+            display: flex;
+            gap: 24px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--light-grey);
+        }
+
+        .initiative-row:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .initiative-row:first-child {
+            padding-top: 0;
+        }
+
+        .initiative-label {
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--mid-grey);
+            min-width: 120px;
+        }
+
+        .initiative-value {
+            flex: 1;
+            color: var(--dark-grey);
+        }
+
+        /* Timeline */
+        .timeline-container {
+            margin-top: 48px;
+        }
+
+        .timeline-container h3 {
+            margin-bottom: 24px;
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            padding-top: 20px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 28px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--light-grey);
+        }
+
+        .timeline-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            flex: 1;
+        }
+
+        .timeline-date {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--white);
+            background: var(--teal);
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .timeline-content {
+            font-size: 13px;
+            color: var(--dark-grey);
+            text-align: center;
+            max-width: 120px;
+            line-height: 1.4;
+        }
+
+        /* Responsive */
+        @media (max-width: 800px) {
+            .container {
+                padding: 0 24px;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .kpi-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .numbered-section {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .section-number {
+                font-size: 36px;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .initiative-row {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .timeline {
+                flex-direction: column;
+                gap: 24px;
+                padding-left: 20px;
+            }
+
+            .timeline::before {
+                top: 0;
+                bottom: 0;
+                left: 8px;
+                width: 2px;
+                height: auto;
+            }
+
+            .timeline-item {
+                flex-direction: row;
+                align-items: flex-start;
+                gap: 16px;
+            }
+
+            .timeline-content {
+                text-align: left;
+                max-width: none;
+            }
+        }
+
+        @media print {
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
+            
+            .section {
+                padding: 40px 0;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <svg class="hero-bg" viewBox="0 0 600 600">
+            <circle cx="300" cy="300" r="280" fill="none" stroke="#E8E6E3" stroke-width="1"/>
+            <circle cx="300" cy="300" r="200" fill="none" stroke="#E8E6E3" stroke-width="1"/>
+            <circle cx="300" cy="300" r="120" fill="none" stroke="#E63946" stroke-width="1" opacity="0.3"/>
+        </svg>
+        <div class="container">
+            <div class="hero-content">
+                <div class="section-label">Project Background</div>
+                <h1>Closing the <em>Feedback Loop</em></h1>
+                <p class="hero-subtitle">From insight to initiative: the context and rationale behind the Karriereplattform project.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Section 1: The Problem -->
+    <section class="section">
+        <div class="container">
+            <div class="section-label reveal">From Insight to Action</div>
+            <h2 class="reveal">Three Blind Spots</h2>
+            <p class="reveal">Our discovery work uncovered three structural weaknesses limiting the effectiveness of our employment services:</p>
+
+            <div class="numbered-section reveal">
+                <div class="section-number">01</div>
+                <div class="section-content">
+                    <h3>Information Gap</h3>
+                    <p>Over half of the information that determines participant success requires advisors to remember to ask and collect manually. We lack systematic access to the data that actually matters.</p>
+                </div>
+            </div>
+
+            <div class="numbered-section reveal">
+                <div class="section-number">02</div>
+                <div class="section-content">
+                    <h3>Time Loss</h3>
+                    <p>Advisors and participants spend hours on formatting, duplicate data entry, and manual reporting. A participant's birthdate may be entered up to 50 times across different documents and systems.</p>
+                </div>
+            </div>
+
+            <div class="numbered-section reveal">
+                <div class="section-number">03</div>
+                <div class="section-content">
+                    <h3>Missing Market Feedback</h3>
+                    <p>We send profiles into the market but have no systematic way to know if our work meets employer needs. We operate on assumptions—without documentation to validate them.</p>
+                </div>
+            </div>
+
+            <div class="highlight-box reveal">
+                <p><strong>Core insight:</strong> We cannot document the effectiveness of our services because we have no closed feedback loop from the labor market back to our delivery.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Section 2: Current State vs Future -->
+    <section class="warm-section section">
+        <div class="container">
+            <div class="section-label reveal">The Missing Link</div>
+            <h2 class="reveal">From Open Loop to Closed Loop</h2>
+            <p class="reveal">Todays NAV approved Felles-CV is a list of available candidates that goes out as a PDF newsletter to interested recruiters. The only response mechanism is email. We don't know who opens it, what they search for, or how to optimize profiles to to increase the response rate.</p>
+
+            <div class="svg-container reveal">
+                <svg viewBox="0 0 900 400" width="900" height="400">
+                    <!-- Left side: Open Loop (Today) -->
+                    <g transform="translate(0, 0)">
+                        <!-- Label -->
+                        <text x="180" y="30" font-family="DM Sans" font-size="12" font-weight="500" fill="#9A9894" text-anchor="middle" letter-spacing="0.15em">TODAY: OPEN LOOP</text>
+                        
+                        <!-- Falck box -->
+                        <rect x="60" y="60" width="120" height="60" rx="8" fill="#FFFFFF" stroke="#E8E6E3" stroke-width="2"/>
+                        <text x="120" y="95" font-family="DM Sans" font-size="14" font-weight="500" fill="#3D3D3D" text-anchor="middle">Falck</text>
+                        
+                        <!-- Arrow to PDF -->
+                        <line x1="180" y1="90" x2="220" y2="90" stroke="#E8E6E3" stroke-width="2"/>
+                        <polygon points="220,85 230,90 220,95" fill="#E8E6E3"/>
+                        
+                        <!-- PDF box -->
+                        <rect x="230" y="60" width="80" height="60" rx="8" fill="#FFFFFF" stroke="#E8E6E3" stroke-width="2"/>
+                        <text x="270" y="88" font-family="DM Sans" font-size="13" fill="#9A9894" text-anchor="middle">PDF</text>
+                        <text x="270" y="104" font-family="DM Sans" font-size="11" fill="#9A9894" text-anchor="middle">Email</text>
+                        
+                        <!-- Arrow to Market -->
+                        <line x1="310" y1="90" x2="350" y2="90" stroke="#E8E6E3" stroke-width="2"/>
+                        <polygon points="350,85 360,90 350,95" fill="#E8E6E3"/>
+                        
+                        <!-- Market box -->
+                        <rect x="360" y="60" width="100" height="60" rx="8" fill="#FFFFFF" stroke="#E8E6E3" stroke-width="2"/>
+                        <text x="410" y="95" font-family="DM Sans" font-size="14" font-weight="500" fill="#3D3D3D" text-anchor="middle">Market</text>
+                        
+                        <!-- Broken arrow down (fading) -->
+                        <line x1="410" y1="120" x2="410" y2="180" stroke="#E8E6E3" stroke-width="2" stroke-dasharray="6 4"/>
+                        
+                        <!-- Question mark / void -->
+                        <circle cx="410" cy="220" r="40" fill="none" stroke="#E8E6E3" stroke-width="2" stroke-dasharray="6 4"/>
+                        <text x="410" y="230" font-family="Instrument Serif" font-size="36" fill="#E8E6E3" text-anchor="middle">?</text>
+                        
+                        <!-- Problem indicators -->
+                        <g transform="translate(60, 300)">
+                            <circle cx="10" cy="10" r="8" fill="#E63946" opacity="0.2"/>
+                            <text x="10" y="14" font-family="DM Sans" font-size="12" fill="#E63946" text-anchor="middle">✕</text>
+                            <text x="28" y="14" font-family="DM Sans" font-size="13" fill="#9A9894">No tracking</text>
+                        </g>
+                        <g transform="translate(60, 330)">
+                            <circle cx="10" cy="10" r="8" fill="#E63946" opacity="0.2"/>
+                            <text x="10" y="14" font-family="DM Sans" font-size="12" fill="#E63946" text-anchor="middle">✕</text>
+                            <text x="28" y="14" font-family="DM Sans" font-size="13" fill="#9A9894">No search data</text>
+                        </g>
+                        <g transform="translate="60, 360)">
+                            <circle cx="10" cy="10" r="8" fill="#E63946" opacity="0.2"/>
+                            <text x="10" y="14" font-family="DM Sans" font-size="12" fill="#E63946" text-anchor="middle">✕</text>
+                            <text x="28" y="14" font-family="DM Sans" font-size="13" fill="#9A9894">No validation</text>
+                        </g>
+                    </g>
+                    
+                    <!-- Divider -->
+                    <line x1="450" y1="40" x2="450" y2="380" stroke="#E8E6E3" stroke-width="1" stroke-dasharray="4 4"/>
+                    
+                    <!-- Right side: Closed Loop (After) -->
+                    <g transform="translate(470, 0)">
+                        <!-- Label -->
+                        <text x="200" y="30" font-family="DM Sans" font-size="12" font-weight="500" fill="#0D9488" text-anchor="middle" letter-spacing="0.15em">AFTER: CLOSED LOOP</text>
+                        
+                        <!-- Platform box (central) -->
+                        <rect x="120" y="100" width="160" height="80" rx="12" fill="#FFFFFF" stroke="#0D9488" stroke-width="2"/>
+                        <text x="200" y="135" font-family="DM Sans" font-size="11" font-weight="500" fill="#0D9488" text-anchor="middle" letter-spacing="0.1em">PLATFORM</text>
+                        <text x="200" y="158" font-family="DM Sans" font-size="13" fill="#3D3D3D" text-anchor="middle">Single data core</text>
+                        
+                        <!-- Participant -->
+                        <rect x="20" y="60" width="80" height="50" rx="8" fill="#FFFFFF" stroke="#E8E6E3" stroke-width="2"/>
+                        <text x="60" y="90" font-family="DM Sans" font-size="12" fill="#3D3D3D" text-anchor="middle">Participant</text>
+                        <line x1="100" y1="85" x2="120" y2="120" stroke="#E8E6E3" stroke-width="2"/>
+                        <polygon points="118,115 125,122 115,122" fill="#E8E6E3"/>
+                        
+                        <!-- Advisor -->
+                        <rect x="20" y="190" width="80" height="50" rx="8" fill="#FFFFFF" stroke="#E8E6E3" stroke-width="2"/>
+                        <text x="60" y="220" font-family="DM Sans" font-size="12" fill="#3D3D3D" text-anchor="middle">Advisor</text>
+                        <line x1="100" y1="215" x2="120" y2="165" stroke="#E8E6E3" stroke-width="2"/>
+                        <polygon points="118,170 125,163 115,163" fill="#E8E6E3"/>
+                        
+                        <!-- Market -->
+                        <rect x="300" y="100" width="100" height="80" rx="8" fill="#FFFFFF" stroke="#E8E6E3" stroke-width="2"/>
+                        <text x="350" y="135" font-family="DM Sans" font-size="12" fill="#3D3D3D" text-anchor="middle">Market</text>
+                        <text x="350" y="155" font-family="DM Sans" font-size="11" fill="#9A9894" text-anchor="middle">Search, filter,</text>
+                        <text x="350" y="170" font-family="DM Sans" font-size="11" fill="#9A9894" text-anchor="middle">save, contact</text>
+                        
+                        <!-- Bidirectional arrows Platform <-> Market -->
+                        <line x1="280" y1="130" x2="300" y2="130" stroke="#0D9488" stroke-width="2"/>
+                        <polygon points="298,125 308,130 298,135" fill="#0D9488"/>
+                        <line x1="300" y1="150" x2="280" y2="150" stroke="#0D9488" stroke-width="2"/>
+                        <polygon points="282,145 272,150 282,155" fill="#0D9488"/>
+                        
+                        <!-- Analytics box -->
+                        <rect x="140" y="220" width="120" height="60" rx="8" fill="#0D9488" fill-opacity="0.1" stroke="#0D9488" stroke-width="2"/>
+                        <text x="200" y="248" font-family="DM Sans" font-size="11" font-weight="500" fill="#0D9488" text-anchor="middle">ANALYTICS</text>
+                        <text x="200" y="265" font-family="DM Sans" font-size="11" fill="#3D3D3D" text-anchor="middle">Traffic · Patterns · ROI</text>
+                        
+                        <!-- Arrow from platform to analytics -->
+                        <line x1="200" y1="180" x2="200" y2="220" stroke="#0D9488" stroke-width="2"/>
+                        <polygon points="195,218 200,228 205,218" fill="#0D9488"/>
+                        
+                        <!-- Success indicators -->
+                        <g transform="translate(20, 300)">
+                            <circle cx="10" cy="10" r="8" fill="#0D9488" opacity="0.2"/>
+                            <text x="10" y="14" font-family="DM Sans" font-size="12" fill="#0D9488" text-anchor="middle">✓</text>
+                            <text x="28" y="14" font-family="DM Sans" font-size="13" fill="#3D3D3D">Track engagement</text>
+                        </g>
+                        <g transform="translate(20, 330)">
+                            <circle cx="10" cy="10" r="8" fill="#0D9488" opacity="0.2"/>
+                            <text x="10" y="14" font-family="DM Sans" font-size="12" fill="#0D9488" text-anchor="middle">✓</text>
+                            <text x="28" y="14" font-family="DM Sans" font-size="13" fill="#3D3D3D">Capture search patterns</text>
+                        </g>
+                        <g transform="translate(20, 360)">
+                            <circle cx="10" cy="10" r="8" fill="#0D9488" opacity="0.2"/>
+                            <text x="10" y="14" font-family="DM Sans" font-size="12" fill="#0D9488" text-anchor="middle">✓</text>
+                            <text x="28" y="14" font-family="DM Sans" font-size="13" fill="#3D3D3D">Document effectiveness</text>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+
+            <p class="reveal">With a digital, searchable platform, we can finally capture what the market actually wants: traffic patterns, search queries, profile views, save rates, and conversion from interest to contact.</p>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Section 3: The Solution -->
+    <section class="section">
+        <div class="container">
+            <div class="section-label reveal">The Solution</div>
+            <h2 class="reveal">One Platform, Three Perspectives</h2>
+            <p class="reveal">The Falck Job Seeker Platform integrates the participant journey, advisor workflow, and market feedback into a single system with one shared data core.</p>
+
+            <div class="cards-grid reveal">
+                <div class="card">
+                    <div class="card-icon" style="background: var(--violet-light);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2">
+                            <circle cx="12" cy="8" r="4"/>
+                            <path d="M4 20c0-4 4-6 8-6s8 2 8 6"/>
+                        </svg>
+                    </div>
+                    <h4>For Participants</h4>
+                    <p>Structured CV builder, gamified progress tracking, automatic reminders, and visible market interest in their profile.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="background: var(--teal-light);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <path d="M9 9h6M9 13h6M9 17h4"/>
+                        </svg>
+                    </div>
+                    <h4>For Advisors</h4>
+                    <p>Unified dashboard, automatic data collection (70% of currently manual tasks), semi-automated reports, and direct contact requests from employers.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="background: var(--red-light);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E63946" stroke-width="2">
+                            <path d="M3 3v18h18"/>
+                            <path d="M7 14l4-4 4 4 5-5"/>
+                        </svg>
+                    </div>
+                    <h4>For Market Intelligence</h4>
+                    <p>Searchable candidate portal with analytics: traffic, search patterns, profile views, save rates, and conversion tracking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Strategic Position on AI -->
+    <section class="dark-section section">
+        <div class="container">
+            <div class="section-label reveal">Strategic Position</div>
+            <h2 class="reveal">AI-Ready, Not AI-Driven</h2>
+            <p class="reveal">The EU AI Act (effective August 2026) classifies employment services as high-risk. AI used for recruitment, candidate screening, or decisions affecting benefits eligibility requires extensive documentation, transparency, human oversight, and bias testing.</p>
+
+            <table class="data-table reveal">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Approach</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Now</strong></td>
+                        <td>Build systems right. Ensure data quality. Humans make all decisions.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Post-2026</strong></td>
+                        <td>Activate AI features when compliance framework is clear and data is validated.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="reveal" style="margin-top: 32px; color: var(--mid-grey);">We build the foundation before adding the turbocharger. This positions Falck as a responsible, forward-thinking partner—not a compliance risk.</p>
+        </div>
+    </section>
+
+    <!-- Section 5: Outcomes -->
+    <section class="section">
+        <div class="container">
+            <div class="section-label reveal">What This Enables</div>
+            <h2 class="reveal">From Assumptions to Evidence</h2>
+            
+            <div class="outcomes-box reveal">
+                <h3>For the first time, we can document the full chain:</h3>
+                <div class="outcome-item">
+                    <div class="outcome-check">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                    </div>
+                    <p><strong>Are our profiles reaching the market?</strong> — Track views, searches, and engagement</p>
+                </div>
+                <div class="outcome-item">
+                    <div class="outcome-check">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                    </div>
+                    <p><strong>What competencies are actually in demand?</strong> — Capture search patterns and filters used</p>
+                </div>
+                <div class="outcome-item">
+                    <div class="outcome-check">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                    </div>
+                    <p><strong>Where do we lose interest?</strong> — Analyze drop-off points in the funnel</p>
+                </div>
+                <div class="outcome-item">
+                    <div class="outcome-check">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                    </div>
+                    <p><strong>What's our conversion rate?</strong> — Measure from profile view to meeting booked</p>
+                </div>
+            </div>
+
+            <div class="highlight-box reveal" style="margin-top: 48px;">
+                <p><strong>The bottom line:</strong> We can finally demonstrate to NAV—and ourselves—whether our methods work, and adjust based on evidence rather than intuition.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Section 6: KPIs and Initiative -->
+    <section class="section">
+        <div class="container">
+            <div class="section-label reveal">Measurable Impact</div>
+            <h2 class="reveal">How We Will Know It Works</h2>
+            <p class="reveal">The platform's success will be measured across three dimensions: placement effectiveness, operational efficiency, and market engagement.</p>
+
+            <div class="kpi-grid reveal">
+                <div class="kpi-category">
+                    <h3>Placement & Quality</h3>
+                    <div class="kpi-item">
+                        <div class="kpi-metric">↑ X%</div>
+                        <div class="kpi-description">
+                            <strong>Placement rate</strong>
+                            <span>Higher placement percentage per contract year-over-year</span>
+                        </div>
+                    </div>
+                    <div class="kpi-item">
+                        <div class="kpi-metric">9→3 wks</div>
+                        <div class="kpi-description">
+                            <strong>Time to market-ready</strong>
+                            <span>Reduce average time to completed profile/CV</span>
+                        </div>
+                    </div>
+                    <div class="kpi-item">
+                        <div class="kpi-metric">+50%</div>
+                        <div class="kpi-description">
+                            <strong>Interview frequency</strong>
+                            <span>Increase in first interviews per participant by mid-evaluation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kpi-category">
+                    <h3>Operational Efficiency</h3>
+                    <div class="kpi-item">
+                        <div class="kpi-metric">X→Y hrs</div>
+                        <div class="kpi-description">
+                            <strong>Admin time per advisor</strong>
+                            <span>Reduce weekly administrative workload</span>
+                        </div>
+                    </div>
+                    <div class="kpi-item">
+                        <div class="kpi-metric">↑</div>
+                        <div class="kpi-description">
+                            <strong>Advisor satisfaction</strong>
+                            <span>More time on value-creating work, less on tedious tasks</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kpi-category">
+                    <h3>Market Feedback Loop</h3>
+                    <div class="kpi-item">
+                        <div class="kpi-metric">X→Y</div>
+                        <div class="kpi-description">
+                            <strong>Direct employer inquiries</strong>
+                            <span>Increase inbound requests via candidate database</span>
+                        </div>
+                    </div>
+                    <div class="kpi-item">
+                        <div class="kpi-metric">New</div>
+                        <div class="kpi-description">
+                            <strong>Search pattern data</strong>
+                            <span>For the first time: know what employers are looking for</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Bridge to Initiative -->
+    <section class="warm-section section">
+        <div class="container">
+            <div class="section-label reveal">The Initiative</div>
+            <h2 class="reveal">Karriereplattform</h2>
+            <p class="reveal" style="font-size: 19px; color: var(--dark-grey); max-width: 700px;">Business intelligence, efficient administration, and market contact with NAV-compliant, AI-ready architecture.</p>
+
+            <div class="initiative-overview reveal">
+                <div class="initiative-row">
+                    <div class="initiative-label">Type</div>
+                    <div class="initiative-value">Tender security and technological innovation</div>
+                </div>
+                <div class="initiative-row">
+                    <div class="initiative-label">Objective</div>
+                    <div class="initiative-value">Significantly increase probability of winning the Kompnett tender (value 40-50 MNOK) and establish a scalable AI platform compliant with AI Act Annex III requirements</div>
+                </div>
+                <div class="initiative-row">
+                    <div class="initiative-label">Strategic value</div>
+                    <div class="initiative-value">Increased competitive strength through quality improvements in our service offerings</div>
+                </div>
+            </div>
+
+            <div class="timeline-container reveal">
+                <h3>Key Milestones</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">01-26</div>
+                        <div class="timeline-content">Project start</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">02-26</div>
+                        <div class="timeline-content">Architecture, UI & user insight documented</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">03-26</div>
+                        <div class="timeline-content">Compliance, documentation requirements & back-end</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">04-26</div>
+                        <div class="timeline-content">User test group established</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">06-26</div>
+                        <div class="timeline-content">Solution in use across Kompnett (pilot end)</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">09-26</div>
+                        <div class="timeline-content">First effects realized and reported to NAV</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box reveal" style="margin-top: 48px; background: var(--white);">
+                <p><strong>Pre-requisites:</strong> Approved architecture from NAV (Zero Trust/Data processor agreement), completed DPIA and FRIA per Art 27, integration with existing Falck systems.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="dark-section section" style="padding: 60px 0;">
+        <div class="container" style="text-align: center;">
+            <p class="reveal" style="font-size: 20px; color: var(--mid-grey); max-width: 600px; margin: 0 auto;">This document provides context and background for the Karriereplattform initiative. See the full project brief for team composition, financials, and detailed scope.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Falck Norge · Employment Services · Project Background Document 2025</p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
