@@ -9,20 +9,20 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <style>
         :root {
-            --white: #FFFFFF;
-            --off-white: #FAFAFA;
-            --warm-white: #F8F6F4;
-            --light-grey: #E8E6E3;
-            --mid-grey: #9A9894;
-            --dark-grey: #3D3D3D;
-            --black: #1A1A1A;
-            --red: #E63946;
-            --red-dark: #C1121F;
-            --red-light: rgba(230, 57, 70, 0.08);
-            --green: #2D936C;
-            --green-light: rgba(45, 147, 108, 0.08);
-            --amber: #F4A261;
-            --amber-light: rgba(244, 162, 97, 0.08);
+            --paper: #FFFFFF;
+            --surface: #F7F7F8;
+            --rule: #E9E9E9;
+            --ink: #1B2045;
+            --body: #425565;
+            --muted: #7A8896;
+            --red: #FF1E28;
+            --red-text: #ED000B;
+            --red-deep: #B00008;
+            --red-tint: rgba(255, 30, 40, 0.08);
+            --burgundy: #66182A;
+            --burgundy-tint: rgba(102, 24, 42, 0.08);
+            --mauve: #BCA5AB;
+            --mauve-tint: rgba(188, 165, 171, 0.16);
         }
 
         * {
@@ -37,8 +37,8 @@
 
         body {
             font-family: 'DM Sans', -apple-system, sans-serif;
-            background: var(--white);
-            color: var(--black);
+            background: var(--paper);
+            color: var(--body);
             line-height: 1.7;
             font-size: 17px;
             font-weight: 400;
@@ -82,10 +82,11 @@
             align-items: center;
             gap: 12px;
             text-decoration: none;
-            color: var(--black);
+            color: var(--ink);
         }
 
-        .logo svg {
+        .logo svg,
+        .logo img {
             width: 32px;
             height: 32px;
         }
@@ -102,7 +103,7 @@
         }
 
         nav a {
-            color: var(--mid-grey);
+            color: var(--muted);
             text-decoration: none;
             font-size: 14px;
             font-weight: 500;
@@ -145,13 +146,13 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: var(--red-light);
-            color: var(--red);
+            background: var(--red-tint);
+            color: var(--red-text);
             padding: 8px 16px;
             border-radius: 100px;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 500;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.15em;
             text-transform: uppercase;
             margin-bottom: 32px;
             animation: fadeSlideUp 0.8s ease both;
@@ -167,12 +168,13 @@
 
         h1 {
             font-family: 'Instrument Serif', Georgia, serif;
-            font-size: clamp(40px, 6vw, 72px);
+            font-size: clamp(48px, 7vw, 84px);
             font-weight: 400;
             line-height: 1.1;
             letter-spacing: -0.03em;
             margin-bottom: 28px;
             animation: fadeSlideUp 0.8s ease 0.1s both;
+            color: var(--ink);
         }
 
         h1 em {
@@ -182,7 +184,7 @@
 
         .hero-subtitle {
             font-size: 19px;
-            color: var(--dark-grey);
+            color: var(--body);
             max-width: 560px;
             animation: fadeSlideUp 0.8s ease 0.2s both;
             line-height: 1.7;
@@ -202,7 +204,7 @@
         .section-divider {
             width: 100%;
             height: 1px;
-            background: linear-gradient(90deg, transparent, var(--light-grey), transparent);
+            background: linear-gradient(90deg, transparent, var(--rule), transparent);
         }
 
         .section-header {
@@ -214,7 +216,7 @@
             font-weight: 500;
             letter-spacing: 0.15em;
             text-transform: uppercase;
-            color: var(--red);
+            color: var(--red-text);
             margin-bottom: 16px;
         }
 
@@ -225,6 +227,7 @@
             line-height: 1.2;
             letter-spacing: -0.02em;
             margin-bottom: 20px;
+            color: var(--ink);
         }
 
         h3 {
@@ -233,10 +236,11 @@
             font-weight: 400;
             margin-bottom: 16px;
             letter-spacing: -0.01em;
+            color: var(--ink);
         }
 
         p {
-            color: var(--dark-grey);
+            color: var(--body);
             margin-bottom: 20px;
         }
 
@@ -257,29 +261,29 @@
         }
 
         .intro-highlight {
-            background: var(--warm-white);
-            border-radius: 20px;
+            background: var(--surface);
+            border-radius: 12px;
             padding: 40px;
             border-left: 4px solid var(--red);
         }
 
         .intro-highlight p {
             font-size: 17px;
-            color: var(--black);
+            color: var(--ink);
             margin-bottom: 0;
         }
 
         /* Ecosystem Section */
         .ecosystem-section {
-            background: var(--warm-white);
+            background: var(--surface);
         }
 
         .ecosystem-visual {
-            background: var(--white);
-            border-radius: 24px;
-            padding: 48px;
+            background: var(--paper);
+            border-radius: 16px;
+            padding: 40px;
             margin-top: 48px;
-            border: 1px solid rgba(0,0,0,0.04);
+            border: 1px solid var(--rule);
             overflow-x: auto;
         }
 
@@ -297,8 +301,8 @@
         }
 
         .service-card {
-            background: var(--white);
-            border-radius: 16px;
+            background: var(--paper);
+            border-radius: 12px;
             padding: 28px;
             border: 1px solid rgba(0,0,0,0.04);
             transition: all 0.3s ease;
@@ -312,7 +316,7 @@
         .service-card-icon {
             width: 44px;
             height: 44px;
-            border-radius: 12px;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -333,7 +337,7 @@
 
         .service-card p {
             font-size: 14px;
-            color: var(--mid-grey);
+            color: var(--muted);
             margin-bottom: 12px;
         }
 
@@ -348,24 +352,24 @@
         }
 
         .data-sensitive {
-            background: rgba(230, 57, 70, 0.1);
+            background: rgba(255, 30, 40, 0.1);
             color: var(--red);
         }
 
         .data-moderate {
-            background: rgba(244, 162, 97, 0.15);
-            color: #C77B38;
+            background: rgba(188,165,171, 0.15);
+            color: #A88E95;
         }
 
         .data-standard {
-            background: rgba(45, 147, 108, 0.1);
-            color: var(--green);
+            background: rgba(102, 24, 42, 0.1);
+            color: var(--burgundy);
         }
 
         /* Why Start Here */
         .why-section {
-            background: var(--black);
-            color: var(--white);
+            background: var(--ink);
+            color: var(--paper);
         }
 
         .why-section .section-label {
@@ -373,7 +377,7 @@
         }
 
         .why-section h2 {
-            color: var(--white);
+            color: var(--paper);
         }
 
         .why-section p {
@@ -390,7 +394,7 @@
         .why-card {
             padding: 32px;
             background: rgba(255,255,255,0.03);
-            border-radius: 16px;
+            border-radius: 12px;
             border: 1px solid rgba(255,255,255,0.06);
         }
 
@@ -406,7 +410,7 @@
             font-family: 'Instrument Serif', Georgia, serif;
             font-size: 20px;
             font-weight: 400;
-            color: var(--white);
+            color: var(--paper);
             margin-bottom: 12px;
         }
 
@@ -416,11 +420,12 @@
 
         /* AS-IS Section */
         .asis-visual {
-            background: var(--warm-white);
-            border-radius: 24px;
-            padding: 48px;
+            background: var(--surface);
+            border-radius: 16px;
+            padding: 40px;
             margin-top: 48px;
             overflow-x: auto;
+            border: 1px solid var(--rule);
         }
 
         .asis-svg {
@@ -440,15 +445,15 @@
             display: flex;
             gap: 16px;
             padding: 24px;
-            background: var(--red-light);
-            border-radius: 12px;
+            background: var(--red-tint);
+            border-radius: 10px;
         }
 
         .pain-icon {
             width: 40px;
             height: 40px;
-            background: var(--white);
-            border-radius: 10px;
+            background: var(--paper);
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -465,27 +470,26 @@
             font-size: 16px;
             font-weight: 500;
             margin-bottom: 4px;
-            color: var(--black);
+            color: var(--ink);
         }
 
         .pain-point p {
             font-size: 14px;
-            color: var(--dark-grey);
+            color: var(--body);
             margin: 0;
         }
 
         /* TO-BE Section */
         .tobe-section {
-            background: linear-gradient(180deg, var(--white) 0%, var(--warm-white) 100%);
+            background: linear-gradient(180deg, var(--paper) 0%, var(--surface) 100%);
         }
 
         .tobe-visual {
-            background: var(--white);
-            border-radius: 24px;
-            padding: 48px;
+            background: var(--paper);
+            border-radius: 16px;
+            padding: 40px;
             margin-top: 48px;
-            border: 2px solid var(--green);
-            box-shadow: 0 24px 64px rgba(45, 147, 108, 0.08);
+            border: 1px solid var(--rule);
             overflow-x: auto;
         }
 
@@ -497,7 +501,7 @@
 
         /* Summary Section */
         .summary-section {
-            background: var(--warm-white);
+            background: var(--surface);
         }
 
         .summary-content {
@@ -512,8 +516,8 @@
         }
 
         .summary-outcomes {
-            background: var(--white);
-            border-radius: 20px;
+            background: var(--paper);
+            border-radius: 12px;
             padding: 40px;
             border: 1px solid rgba(0,0,0,0.04);
         }
@@ -527,7 +531,7 @@
             align-items: flex-start;
             gap: 16px;
             padding: 16px 0;
-            border-bottom: 1px solid var(--light-grey);
+            border-bottom: 1px solid var(--rule);
         }
 
         .outcome-item:last-child {
@@ -538,7 +542,7 @@
         .outcome-check {
             width: 28px;
             height: 28px;
-            background: var(--green-light);
+            background: var(--burgundy-tint);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -549,20 +553,20 @@
         .outcome-check svg {
             width: 14px;
             height: 14px;
-            stroke: var(--green);
+            stroke: var(--burgundy);
         }
 
         .outcome-item p {
             font-size: 15px;
             margin: 0;
-            color: var(--black);
+            color: var(--ink);
         }
 
         /* Footer */
         footer {
             padding: 40px 0;
-            border-top: 1px solid var(--light-grey);
-            background: var(--white);
+            border-top: 1px solid var(--rule);
+            background: var(--paper);
         }
 
         .footer-inner {
@@ -573,14 +577,14 @@
 
         .footer-text {
             font-size: 14px;
-            color: var(--mid-grey);
+            color: var(--muted);
         }
 
         .footer-brand {
             display: flex;
             align-items: center;
             gap: 8px;
-            color: var(--mid-grey);
+            color: var(--muted);
             font-size: 14px;
         }
 
@@ -638,10 +642,7 @@
         <div class="container">
             <div class="header-inner">
                 <a href="#" class="logo">
-                    <svg viewBox="0 0 32 32" fill="none">
-                        <circle cx="16" cy="16" r="14" stroke="#E63946" stroke-width="2"/>
-                        <path d="M16 8v8l6 4" stroke="#E63946" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
+                    <img src="data:image/png;base64,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" alt="Falck" width="32" height="32">
                     <span class="logo-text">Falck</span>
                 </a>
                 <nav>
@@ -657,9 +658,9 @@
 
     <section class="hero">
         <svg class="hero-bg" viewBox="0 0 600 600" fill="none">
-            <circle cx="300" cy="300" r="250" stroke="#E63946" stroke-width="0.5" stroke-dasharray="4 4"/>
-            <circle cx="300" cy="300" r="200" stroke="#E63946" stroke-width="0.5"/>
-            <circle cx="300" cy="300" r="150" stroke="#E63946" stroke-width="0.5" stroke-dasharray="8 8"/>
+            <circle cx="300" cy="300" r="250" stroke="#FF1E28" stroke-width="0.5" stroke-dasharray="4 4"/>
+            <circle cx="300" cy="300" r="200" stroke="#FF1E28" stroke-width="0.5"/>
+            <circle cx="300" cy="300" r="150" stroke="#FF1E28" stroke-width="0.5" stroke-dasharray="8 8"/>
         </svg>
         <div class="container">
             <div class="hero-content">
@@ -703,102 +704,102 @@
             <div class="ecosystem-visual reveal">
                 <svg class="ecosystem-svg" viewBox="0 0 1000 400" fill="none">
                     <!-- Background timeline -->
-                    <line x1="100" y1="200" x2="900" y2="200" stroke="#E8E6E3" stroke-width="2"/>
+                    <line x1="100" y1="200" x2="900" y2="200" stroke="#E9E9E9" stroke-width="2"/>
                     
                     <!-- Phase markers -->
-                    <circle cx="150" cy="200" r="8" fill="#2D936C"/>
-                    <circle cx="350" cy="200" r="8" fill="#2D936C"/>
-                    <circle cx="550" cy="200" r="8" fill="#2D936C"/>
-                    <circle cx="750" cy="200" r="8" fill="#F4A261"/>
-                    <circle cx="900" cy="200" r="8" fill="#E63946" stroke="#E63946" stroke-width="3" stroke-opacity="0.3"/>
+                    <circle cx="150" cy="200" r="8" fill="#66182A"/>
+                    <circle cx="350" cy="200" r="8" fill="#66182A"/>
+                    <circle cx="550" cy="200" r="8" fill="#66182A"/>
+                    <circle cx="750" cy="200" r="8" fill="#BCA5AB"/>
+                    <circle cx="900" cy="200" r="8" fill="#FF1E28" stroke="#FF1E28" stroke-width="3" stroke-opacity="0.3"/>
                     
                     <!-- Service boxes -->
                     <!-- Prevention -->
-                    <rect x="80" y="80" width="140" height="80" rx="12" fill="white" stroke="#2D936C" stroke-width="2"/>
-                    <text x="150" y="112" text-anchor="middle" font-family="DM Sans" font-size="11" font-weight="500" fill="#2D936C">PREVENTION</text>
-                    <text x="150" y="132" text-anchor="middle" font-family="Instrument Serif" font-size="14" fill="#1A1A1A">Bedriftshelse</text>
-                    <text x="150" y="148" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#9A9894">BHT Services</text>
+                    <rect x="80" y="80" width="140" height="80" rx="12" fill="white" stroke="#66182A" stroke-width="2"/>
+                    <text x="150" y="112" text-anchor="middle" font-family="DM Sans" font-size="11" font-weight="500" fill="#66182A">PREVENTION</text>
+                    <text x="150" y="132" text-anchor="middle" font-family="Instrument Serif" font-size="14" fill="#1B2045">Bedriftshelse</text>
+                    <text x="150" y="148" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#7A8896">BHT Services</text>
                     
                     <!-- Health/Clarification -->
-                    <rect x="280" y="80" width="140" height="80" rx="12" fill="white" stroke="#2D936C" stroke-width="2"/>
-                    <text x="350" y="112" text-anchor="middle" font-family="DM Sans" font-size="11" font-weight="500" fill="#2D936C">CLARIFICATION</text>
-                    <text x="350" y="132" text-anchor="middle" font-family="Instrument Serif" font-size="14" fill="#1A1A1A">Avklaring</text>
-                    <text x="350" y="148" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#9A9894">Work Capacity</text>
+                    <rect x="280" y="80" width="140" height="80" rx="12" fill="white" stroke="#66182A" stroke-width="2"/>
+                    <text x="350" y="112" text-anchor="middle" font-family="DM Sans" font-size="11" font-weight="500" fill="#66182A">CLARIFICATION</text>
+                    <text x="350" y="132" text-anchor="middle" font-family="Instrument Serif" font-size="14" fill="#1B2045">Avklaring</text>
+                    <text x="350" y="148" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#7A8896">Work Capacity</text>
                     
                     <!-- Intervention -->
-                    <rect x="480" y="80" width="140" height="80" rx="12" fill="white" stroke="#2D936C" stroke-width="2"/>
-                    <text x="550" y="112" text-anchor="middle" font-family="DM Sans" font-size="11" font-weight="500" fill="#2D936C">INTERVENTION</text>
-                    <text x="550" y="132" text-anchor="middle" font-family="Instrument Serif" font-size="14" fill="#1A1A1A">Oppfølging</text>
-                    <text x="550" y="148" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#9A9894">Follow-up</text>
+                    <rect x="480" y="80" width="140" height="80" rx="12" fill="white" stroke="#66182A" stroke-width="2"/>
+                    <text x="550" y="112" text-anchor="middle" font-family="DM Sans" font-size="11" font-weight="500" fill="#66182A">INTERVENTION</text>
+                    <text x="550" y="132" text-anchor="middle" font-family="Instrument Serif" font-size="14" fill="#1B2045">Oppfølging</text>
+                    <text x="550" y="148" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#7A8896">Follow-up</text>
                     
                     <!-- Job-oriented -->
-                    <rect x="680" y="80" width="140" height="80" rx="12" fill="white" stroke="#F4A261" stroke-width="2"/>
-                    <text x="750" y="112" text-anchor="middle" font-family="DM Sans" font-size="11" font-weight="500" fill="#C77B38">JOB-ORIENTED</text>
-                    <text x="750" y="132" text-anchor="middle" font-family="Instrument Serif" font-size="14" fill="#1A1A1A">AMO / Karriere</text>
-                    <text x="750" y="148" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#9A9894">7-9k users/year</text>
+                    <rect x="680" y="80" width="140" height="80" rx="12" fill="white" stroke="#BCA5AB" stroke-width="2"/>
+                    <text x="750" y="112" text-anchor="middle" font-family="DM Sans" font-size="11" font-weight="500" fill="#A88E95">JOB-ORIENTED</text>
+                    <text x="750" y="132" text-anchor="middle" font-family="Instrument Serif" font-size="14" fill="#1B2045">AMO / Karriere</text>
+                    <text x="750" y="148" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#7A8896">7-9k users/year</text>
                     
                     <!-- Reintegration (Gap) -->
-                    <rect x="830" y="80" width="140" height="80" rx="12" fill="white" stroke="#E63946" stroke-width="2" stroke-dasharray="6 4"/>
-                    <text x="900" y="112" text-anchor="middle" font-family="DM Sans" font-size="11" font-weight="500" fill="#E63946">REINTEGRATION</text>
-                    <text x="900" y="132" text-anchor="middle" font-family="Instrument Serif" font-size="14" fill="#1A1A1A">Employment</text>
-                    <text x="900" y="148" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#E63946">No feedback loop</text>
+                    <rect x="830" y="80" width="140" height="80" rx="12" fill="white" stroke="#FF1E28" stroke-width="2" stroke-dasharray="6 4"/>
+                    <text x="900" y="112" text-anchor="middle" font-family="DM Sans" font-size="11" font-weight="500" fill="#FF1E28">REINTEGRATION</text>
+                    <text x="900" y="132" text-anchor="middle" font-family="Instrument Serif" font-size="14" fill="#1B2045">Employment</text>
+                    <text x="900" y="148" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#FF1E28">No feedback loop</text>
                     
                     <!-- Feedback indicators -->
                     <g transform="translate(150, 240)">
-                        <circle r="16" fill="#2D936C" fill-opacity="0.1"/>
-                        <path d="M-6 0l4 4 8-8" stroke="#2D936C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle r="16" fill="#66182A" fill-opacity="0.1"/>
+                        <path d="M-6 0l4 4 8-8" stroke="#66182A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </g>
-                    <text x="150" y="275" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#2D936C">Feedback ✓</text>
+                    <text x="150" y="275" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#66182A">Feedback</text>
                     
                     <g transform="translate(350, 240)">
-                        <circle r="16" fill="#2D936C" fill-opacity="0.1"/>
-                        <path d="M-6 0l4 4 8-8" stroke="#2D936C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle r="16" fill="#66182A" fill-opacity="0.1"/>
+                        <path d="M-6 0l4 4 8-8" stroke="#66182A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </g>
-                    <text x="350" y="275" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#2D936C">Feedback ✓</text>
+                    <text x="350" y="275" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#66182A">Feedback</text>
                     
                     <g transform="translate(550, 240)">
-                        <circle r="16" fill="#2D936C" fill-opacity="0.1"/>
-                        <path d="M-6 0l4 4 8-8" stroke="#2D936C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle r="16" fill="#66182A" fill-opacity="0.1"/>
+                        <path d="M-6 0l4 4 8-8" stroke="#66182A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </g>
-                    <text x="550" y="275" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#2D936C">Feedback ✓</text>
+                    <text x="550" y="275" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#66182A">Feedback</text>
                     
                     <g transform="translate(750, 240)">
-                        <circle r="16" fill="#F4A261" fill-opacity="0.1"/>
-                        <path d="M-6 0l4 4 8-8" stroke="#F4A261" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle r="16" fill="#BCA5AB" fill-opacity="0.1"/>
+                        <path d="M-6 0l4 4 8-8" stroke="#BCA5AB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </g>
-                    <text x="750" y="275" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#C77B38">Partial ⚠</text>
+                    <text x="750" y="275" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#A88E95">Partial</text>
                     
                     <g transform="translate(900, 240)">
-                        <circle r="16" fill="#E63946" fill-opacity="0.1"/>
-                        <path d="M-5 -5l10 10M5 -5l-10 10" stroke="#E63946" stroke-width="2" stroke-linecap="round"/>
+                        <circle r="16" fill="#FF1E28" fill-opacity="0.1"/>
+                        <path d="M-5 -5l10 10M5 -5l-10 10" stroke="#FF1E28" stroke-width="2" stroke-linecap="round"/>
                     </g>
-                    <text x="900" y="275" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#E63946">No data ✗</text>
+                    <text x="900" y="275" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#FF1E28">No data</text>
                     
                     <!-- Timeline labels -->
-                    <text x="150" y="330" text-anchor="middle" font-family="DM Sans" font-size="11" fill="#9A9894">Employed</text>
-                    <text x="350" y="330" text-anchor="middle" font-family="DM Sans" font-size="11" fill="#9A9894">At Risk</text>
-                    <text x="550" y="330" text-anchor="middle" font-family="DM Sans" font-size="11" fill="#9A9894">Out of Work</text>
-                    <text x="750" y="330" text-anchor="middle" font-family="DM Sans" font-size="11" fill="#9A9894">Job-Ready</text>
-                    <text x="900" y="330" text-anchor="middle" font-family="DM Sans" font-size="11" fill="#9A9894">Re-employed</text>
+                    <text x="150" y="330" text-anchor="middle" font-family="DM Sans" font-size="11" fill="#7A8896">Employed</text>
+                    <text x="350" y="330" text-anchor="middle" font-family="DM Sans" font-size="11" fill="#7A8896">At Risk</text>
+                    <text x="550" y="330" text-anchor="middle" font-family="DM Sans" font-size="11" fill="#7A8896">Out of Work</text>
+                    <text x="750" y="330" text-anchor="middle" font-family="DM Sans" font-size="11" fill="#7A8896">Job-Ready</text>
+                    <text x="900" y="330" text-anchor="middle" font-family="DM Sans" font-size="11" fill="#7A8896">Re-employed</text>
                     
                     <!-- Arrow to market -->
-                    <path d="M850 200 L920 200" stroke="#E63946" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arrowRed)"/>
+                    <path d="M850 200 L920 200" stroke="#FF1E28" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arrowRed)"/>
                     <defs>
                         <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-                            <path d="M0,0 L0,6 L9,3 z" fill="#E63946"/>
+                            <path d="M0,0 L0,6 L9,3 z" fill="#FF1E28"/>
                         </marker>
                     </defs>
                     
                     <!-- Market cloud -->
-                    <text x="950" y="200" text-anchor="start" font-family="DM Sans" font-size="10" fill="#E63946">Labour</text>
-                    <text x="950" y="212" text-anchor="start" font-family="DM Sans" font-size="10" fill="#E63946">Market</text>
+                    <text x="950" y="200" text-anchor="start" font-family="DM Sans" font-size="10" fill="#FF1E28">Labour</text>
+                    <text x="950" y="212" text-anchor="start" font-family="DM Sans" font-size="10" fill="#FF1E28">Market</text>
                 </svg>
             </div>
 
             <div class="service-cards reveal">
                 <div class="service-card">
-                    <div class="service-card-icon" style="background: var(--green-light);">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#2D936C" stroke-width="2" stroke-linecap="round">
+                    <div class="service-card-icon" style="background: var(--burgundy-tint);">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#66182A" stroke-width="2" stroke-linecap="round">
                             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                         </svg>
                     </div>
@@ -808,8 +809,8 @@
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-card-icon" style="background: var(--green-light);">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#2D936C" stroke-width="2" stroke-linecap="round">
+                    <div class="service-card-icon" style="background: var(--burgundy-tint);">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#66182A" stroke-width="2" stroke-linecap="round">
                             <circle cx="12" cy="12" r="10"/>
                             <path d="M12 6v6l4 2"/>
                         </svg>
@@ -820,8 +821,8 @@
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-card-icon" style="background: var(--green-light);">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#2D936C" stroke-width="2" stroke-linecap="round">
+                    <div class="service-card-icon" style="background: var(--burgundy-tint);">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#66182A" stroke-width="2" stroke-linecap="round">
                             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
                             <circle cx="9" cy="7" r="4"/>
                             <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
@@ -833,8 +834,8 @@
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-card-icon" style="background: var(--amber-light);">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#C77B38" stroke-width="2" stroke-linecap="round">
+                    <div class="service-card-icon" style="background: var(--mauve-tint);">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#A88E95" stroke-width="2" stroke-linecap="round">
                             <rect x="2" y="7" width="20" height="14" rx="2"/>
                             <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
                         </svg>
@@ -892,132 +893,132 @@
             <div class="asis-visual reveal">
                 <svg class="asis-svg" viewBox="0 0 1100 500" fill="none">
                     <!-- Background chaos lines -->
-                    <path d="M50 250 Q150 200 200 280 T350 220 T500 300 T650 200 T800 280" stroke="#E8E6E3" stroke-width="1" stroke-dasharray="4 4" fill="none"/>
-                    <path d="M100 300 Q200 350 300 280 T450 350 T600 280" stroke="#E8E6E3" stroke-width="1" stroke-dasharray="4 4" fill="none"/>
+                    <path d="M50 250 Q150 200 200 280 T350 220 T500 300 T650 200 T800 280" stroke="#E9E9E9" stroke-width="1" stroke-dasharray="4 4" fill="none"/>
+                    <path d="M100 300 Q200 350 300 280 T450 350 T600 280" stroke="#E9E9E9" stroke-width="1" stroke-dasharray="4 4" fill="none"/>
                     
                     <!-- Course Start -->
-                    <rect x="40" y="180" width="120" height="140" rx="12" fill="#F8F6F4" stroke="#E8E6E3" stroke-width="1"/>
-                    <text x="100" y="215" text-anchor="middle" font-family="DM Sans" font-size="10" font-weight="500" fill="#9A9894">COURSE START</text>
-                    <rect x="55" y="230" width="90" height="12" rx="2" fill="#E8E6E3"/>
-                    <rect x="55" y="248" width="70" height="12" rx="2" fill="#E8E6E3"/>
-                    <rect x="55" y="266" width="80" height="12" rx="2" fill="#E8E6E3"/>
-                    <text x="100" y="300" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#9A9894">Goals defined</text>
-                    <text x="100" y="312" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#9A9894">once, on paper</text>
+                    <rect x="40" y="180" width="120" height="140" rx="12" fill="#F7F7F8" stroke="#E9E9E9" stroke-width="1"/>
+                    <text x="100" y="215" text-anchor="middle" font-family="DM Sans" font-size="10" font-weight="500" fill="#7A8896">COURSE START</text>
+                    <rect x="55" y="230" width="90" height="12" rx="2" fill="#E9E9E9"/>
+                    <rect x="55" y="248" width="70" height="12" rx="2" fill="#E9E9E9"/>
+                    <rect x="55" y="266" width="80" height="12" rx="2" fill="#E9E9E9"/>
+                    <text x="100" y="300" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#7A8896">Goals defined</text>
+                    <text x="100" y="312" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#7A8896">once, on paper</text>
                     
                     <!-- Job Seeker computer -->
                     <g transform="translate(220, 80)">
-                        <rect width="140" height="100" rx="8" fill="white" stroke="#E63946" stroke-width="2"/>
-                        <text x="70" y="25" text-anchor="middle" font-family="DM Sans" font-size="10" font-weight="500" fill="#E63946">JOB SEEKER</text>
-                        <rect x="15" y="38" width="110" height="8" rx="2" fill="#E8E6E3"/>
-                        <rect x="15" y="52" width="90" height="8" rx="2" fill="#E8E6E3"/>
-                        <rect x="15" y="66" width="100" height="8" rx="2" fill="#E8E6E3"/>
-                        <text x="70" y="88" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#9A9894">CV lives here 💀</text>
+                        <rect width="140" height="100" rx="8" fill="white" stroke="#FF1E28" stroke-width="2"/>
+                        <text x="70" y="25" text-anchor="middle" font-family="DM Sans" font-size="10" font-weight="500" fill="#FF1E28">JOB SEEKER</text>
+                        <rect x="15" y="38" width="110" height="8" rx="2" fill="#E9E9E9"/>
+                        <rect x="15" y="52" width="90" height="8" rx="2" fill="#E9E9E9"/>
+                        <rect x="15" y="66" width="100" height="8" rx="2" fill="#E9E9E9"/>
+                        <text x="70" y="88" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#7A8896">CV lives here</text>
                     </g>
                     
                     <!-- Scattered documents -->
                     <g transform="translate(250, 210)">
-                        <rect width="50" height="60" rx="4" fill="white" stroke="#E8E6E3" stroke-width="1" transform="rotate(-8)"/>
-                        <text x="25" y="35" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#9A9894" transform="rotate(-8)">CV v3</text>
+                        <rect width="50" height="60" rx="4" fill="white" stroke="#E9E9E9" stroke-width="1" transform="rotate(-8)"/>
+                        <text x="25" y="35" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#7A8896" transform="rotate(-8)">CV v3</text>
                     </g>
                     <g transform="translate(310, 230)">
-                        <rect width="50" height="60" rx="4" fill="white" stroke="#E8E6E3" stroke-width="1" transform="rotate(5)"/>
-                        <text x="25" y="35" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#9A9894" transform="rotate(5)">søknad</text>
+                        <rect width="50" height="60" rx="4" fill="white" stroke="#E9E9E9" stroke-width="1" transform="rotate(5)"/>
+                        <text x="25" y="35" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#7A8896" transform="rotate(5)">søknad</text>
                     </g>
                     <g transform="translate(280, 280)">
-                        <rect width="50" height="60" rx="4" fill="white" stroke="#E8E6E3" stroke-width="1" transform="rotate(-3)"/>
-                        <text x="25" y="35" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#9A9894" transform="rotate(-3)">notes</text>
+                        <rect width="50" height="60" rx="4" fill="white" stroke="#E9E9E9" stroke-width="1" transform="rotate(-3)"/>
+                        <text x="25" y="35" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#7A8896" transform="rotate(-3)">notes</text>
                     </g>
                     
                     <!-- Arrow chaos -->
-                    <path d="M160 250 Q200 200 250 220" stroke="#9A9894" stroke-width="1" stroke-dasharray="3 3" fill="none" marker-end="url(#arrowGrey)"/>
-                    <path d="M290 180 Q320 200 350 180" stroke="#9A9894" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+                    <path d="M160 250 Q200 200 250 220" stroke="#7A8896" stroke-width="1" stroke-dasharray="3 3" fill="none" marker-end="url(#arrowGrey)"/>
+                    <path d="M290 180 Q320 200 350 180" stroke="#7A8896" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
                     
                     <!-- Advisor desk -->
                     <g transform="translate(420, 160)">
-                        <rect width="160" height="180" rx="12" fill="white" stroke="#F4A261" stroke-width="2"/>
-                        <text x="80" y="25" text-anchor="middle" font-family="DM Sans" font-size="10" font-weight="500" fill="#C77B38">ADVISOR DESK</text>
+                        <rect width="160" height="180" rx="12" fill="white" stroke="#BCA5AB" stroke-width="2"/>
+                        <text x="80" y="25" text-anchor="middle" font-family="DM Sans" font-size="10" font-weight="500" fill="#A88E95">ADVISOR DESK</text>
                         
                         <!-- Paper pile -->
-                        <rect x="20" y="45" width="60" height="45" rx="4" fill="#F8F6F4" stroke="#E8E6E3" transform="rotate(-2)"/>
-                        <rect x="25" y="40" width="60" height="45" rx="4" fill="#F8F6F4" stroke="#E8E6E3" transform="rotate(1)"/>
-                        <rect x="22" y="35" width="60" height="45" rx="4" fill="white" stroke="#E8E6E3"/>
-                        <text x="52" y="60" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#9A9894">Documents</text>
-                        <text x="52" y="72" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#E63946">pile up ⚠</text>
+                        <rect x="20" y="45" width="60" height="45" rx="4" fill="#F7F7F8" stroke="#E9E9E9" transform="rotate(-2)"/>
+                        <rect x="25" y="40" width="60" height="45" rx="4" fill="#F7F7F8" stroke="#E9E9E9" transform="rotate(1)"/>
+                        <rect x="22" y="35" width="60" height="45" rx="4" fill="white" stroke="#E9E9E9"/>
+                        <text x="52" y="60" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#7A8896">Documents</text>
+                        <text x="52" y="72" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#FF1E28">pile up</text>
                         
                         <!-- Manual entry -->
-                        <rect x="95" y="40" width="50" height="55" rx="4" fill="#E8E6E3"/>
-                        <text x="120" y="62" text-anchor="middle" font-family="DM Sans" font-size="7" fill="#9A9894">Manual</text>
-                        <text x="120" y="72" text-anchor="middle" font-family="DM Sans" font-size="7" fill="#9A9894">logging</text>
-                        <text x="120" y="88" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#E63946">😩</text>
+                        <rect x="95" y="40" width="50" height="55" rx="4" fill="#E9E9E9"/>
+                        <text x="120" y="62" text-anchor="middle" font-family="DM Sans" font-size="7" fill="#7A8896">Manual</text>
+                        <text x="120" y="72" text-anchor="middle" font-family="DM Sans" font-size="7" fill="#7A8896">logging</text>
+                        
                         
                         <!-- Activity counter -->
-                        <rect x="20" y="105" width="120" height="50" rx="6" fill="#FEF3F3"/>
-                        <text x="80" y="125" text-anchor="middle" font-family="DM Sans" font-size="9" font-weight="500" fill="#E63946">Self-reported:</text>
-                        <text x="80" y="142" text-anchor="middle" font-family="DM Sans" font-size="11" fill="#1A1A1A">"12 applications"</text>
+                        <rect x="20" y="105" width="120" height="50" rx="6" fill="#FFF6F6"/>
+                        <text x="80" y="125" text-anchor="middle" font-family="DM Sans" font-size="9" font-weight="500" fill="#FF1E28">Self-reported:</text>
+                        <text x="80" y="142" text-anchor="middle" font-family="DM Sans" font-size="11" fill="#1B2045">"12 applications"</text>
                     </g>
                     
                     <!-- Labour market black box -->
                     <g transform="translate(640, 120)">
-                        <rect width="180" height="180" rx="12" fill="#1A1A1A"/>
-                        <text x="90" y="35" text-anchor="middle" font-family="DM Sans" font-size="11" font-weight="500" fill="#E63946">LABOUR MARKET</text>
-                        <text x="90" y="80" text-anchor="middle" font-family="Instrument Serif" font-size="32" fill="#3D3D3D">?</text>
+                        <rect width="180" height="180" rx="12" fill="#1B2045"/>
+                        <text x="90" y="35" text-anchor="middle" font-family="DM Sans" font-size="11" font-weight="500" fill="#FF1E28">LABOUR MARKET</text>
+                        <text x="90" y="80" text-anchor="middle" font-family="Instrument Serif" font-size="32" fill="#425565">?</text>
                         <text x="90" y="110" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#666">No visibility</text>
                         <text x="90" y="125" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#666">No feedback</text>
                         <text x="90" y="140" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#666">No learning</text>
                         
                         <!-- Employer icons -->
-                        <rect x="30" y="155" width="35" height="18" rx="4" fill="#3D3D3D"/>
-                        <rect x="72" y="155" width="35" height="18" rx="4" fill="#3D3D3D"/>
-                        <rect x="115" y="155" width="35" height="18" rx="4" fill="#3D3D3D"/>
+                        <rect x="30" y="155" width="35" height="18" rx="4" fill="#425565"/>
+                        <rect x="72" y="155" width="35" height="18" rx="4" fill="#425565"/>
+                        <rect x="115" y="155" width="35" height="18" rx="4" fill="#425565"/>
                     </g>
                     
                     <!-- Arrow to black box -->
-                    <path d="M580 250 L640 250" stroke="#9A9894" stroke-width="2" marker-end="url(#arrowGrey)"/>
-                    <text x="610" y="240" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#9A9894">apps sent</text>
-                    <text x="610" y="265" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#E63946">then nothing</text>
+                    <path d="M580 250 L640 250" stroke="#7A8896" stroke-width="2" marker-end="url(#arrowGrey)"/>
+                    <text x="610" y="240" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#7A8896">apps sent</text>
+                    <text x="610" y="265" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#FF1E28">then nothing</text>
                     
                     <!-- NAV Report -->
                     <g transform="translate(880, 170)">
-                        <rect width="140" height="120" rx="12" fill="white" stroke="#E8E6E3" stroke-width="2"/>
-                        <text x="70" y="25" text-anchor="middle" font-family="DM Sans" font-size="10" font-weight="500" fill="#9A9894">NAV REPORT</text>
-                        <rect x="20" y="45" width="100" height="8" rx="2" fill="#E8E6E3"/>
-                        <rect x="20" y="58" width="80" height="8" rx="2" fill="#E8E6E3"/>
-                        <rect x="20" y="71" width="90" height="8" rx="2" fill="#E8E6E3"/>
-                        <text x="70" y="100" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#E63946">Narrative only</text>
-                        <text x="70" y="112" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#E63946">No proof of what worked</text>
+                        <rect width="140" height="120" rx="12" fill="white" stroke="#E9E9E9" stroke-width="2"/>
+                        <text x="70" y="25" text-anchor="middle" font-family="DM Sans" font-size="10" font-weight="500" fill="#7A8896">NAV REPORT</text>
+                        <rect x="20" y="45" width="100" height="8" rx="2" fill="#E9E9E9"/>
+                        <rect x="20" y="58" width="80" height="8" rx="2" fill="#E9E9E9"/>
+                        <rect x="20" y="71" width="90" height="8" rx="2" fill="#E9E9E9"/>
+                        <text x="70" y="100" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#FF1E28">Narrative only</text>
+                        <text x="70" y="112" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#FF1E28">No proof of what worked</text>
                     </g>
                     
                     <!-- Arrow to NAV -->
-                    <path d="M580 290 Q700 350 880 250" stroke="#9A9894" stroke-width="1" stroke-dasharray="4 4" fill="none" marker-end="url(#arrowGrey)"/>
+                    <path d="M580 290 Q700 350 880 250" stroke="#7A8896" stroke-width="1" stroke-dasharray="4 4" fill="none" marker-end="url(#arrowGrey)"/>
                     
                     <!-- Pain point callouts -->
                     <g transform="translate(200, 380)">
-                        <circle r="12" fill="#E63946"/>
+                        <circle r="12" fill="#FF1E28"/>
                         <text x="0" y="4" text-anchor="middle" font-family="DM Sans" font-size="10" font-weight="bold" fill="white">1</text>
                     </g>
-                    <text x="220" y="385" font-family="DM Sans" font-size="10" fill="#E63946">Data silos</text>
+                    <text x="220" y="385" font-family="DM Sans" font-size="10" fill="#FF1E28">Data silos</text>
                     
                     <g transform="translate(350, 380)">
-                        <circle r="12" fill="#E63946"/>
+                        <circle r="12" fill="#FF1E28"/>
                         <text x="0" y="4" text-anchor="middle" font-family="DM Sans" font-size="10" font-weight="bold" fill="white">2</text>
                     </g>
-                    <text x="370" y="385" font-family="DM Sans" font-size="10" fill="#E63946">Manual logging</text>
+                    <text x="370" y="385" font-family="DM Sans" font-size="10" fill="#FF1E28">Manual logging</text>
                     
                     <g transform="translate(520, 380)">
-                        <circle r="12" fill="#E63946"/>
+                        <circle r="12" fill="#FF1E28"/>
                         <text x="0" y="4" text-anchor="middle" font-family="DM Sans" font-size="10" font-weight="bold" fill="white">3</text>
                     </g>
-                    <text x="540" y="385" font-family="DM Sans" font-size="10" fill="#E63946">Self-reported metrics</text>
+                    <text x="540" y="385" font-family="DM Sans" font-size="10" fill="#FF1E28">Self-reported metrics</text>
                     
                     <g transform="translate(700, 380)">
-                        <circle r="12" fill="#E63946"/>
+                        <circle r="12" fill="#FF1E28"/>
                         <text x="0" y="4" text-anchor="middle" font-family="DM Sans" font-size="10" font-weight="bold" fill="white">4</text>
                     </g>
-                    <text x="720" y="385" font-family="DM Sans" font-size="10" fill="#E63946">Zero market feedback</text>
+                    <text x="720" y="385" font-family="DM Sans" font-size="10" fill="#FF1E28">Zero market feedback</text>
                     
                     <defs>
                         <marker id="arrowGrey" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-                            <path d="M0,0 L0,6 L9,3 z" fill="#9A9894"/>
+                            <path d="M0,0 L0,6 L9,3 z" fill="#7A8896"/>
                         </marker>
                     </defs>
                 </svg>
@@ -1086,211 +1087,211 @@
             <div class="tobe-visual reveal">
                 <svg class="tobe-svg" viewBox="0 0 1200 520" fill="none">
                     <!-- Flow lines background -->
-                    <path d="M200 260 C300 260 350 260 430 260" stroke="#2D936C" stroke-width="3" fill="none"/>
-                    <path d="M570 260 C650 260 700 260 780 260" stroke="#2D936C" stroke-width="3" fill="none"/>
-                    <path d="M920 260 C1000 260 1050 260 1100 260" stroke="#2D936C" stroke-width="3" fill="none"/>
+                    <path d="M200 260 C300 260 350 260 430 260" stroke="#66182A" stroke-width="3" fill="none"/>
+                    <path d="M570 260 C650 260 700 260 780 260" stroke="#66182A" stroke-width="3" fill="none"/>
+                    <path d="M920 260 C1000 260 1050 260 1100 260" stroke="#66182A" stroke-width="3" fill="none"/>
                     
                     <!-- Data flow arrows -->
-                    <circle cx="300" cy="260" r="6" fill="#2D936C"/>
-                    <circle cx="500" cy="260" r="6" fill="#2D936C"/>
-                    <circle cx="700" cy="260" r="6" fill="#2D936C"/>
-                    <circle cx="850" cy="260" r="6" fill="#2D936C"/>
-                    <circle cx="1000" cy="260" r="6" fill="#2D936C"/>
+                    <circle cx="300" cy="260" r="6" fill="#66182A"/>
+                    <circle cx="500" cy="260" r="6" fill="#66182A"/>
+                    <circle cx="700" cy="260" r="6" fill="#66182A"/>
+                    <circle cx="850" cy="260" r="6" fill="#66182A"/>
+                    <circle cx="1000" cy="260" r="6" fill="#66182A"/>
                     
                     <!-- JOB SEEKER DASHBOARD -->
                     <g transform="translate(40, 100)">
-                        <rect width="200" height="320" rx="16" fill="white" stroke="#2D936C" stroke-width="2"/>
-                        <rect x="0" y="0" width="200" height="50" rx="16" fill="#2D936C"/>
-                        <rect x="0" y="34" width="200" height="16" fill="#2D936C"/>
+                        <rect width="200" height="320" rx="16" fill="white" stroke="#66182A" stroke-width="2"/>
+                        <rect x="0" y="0" width="200" height="50" rx="16" fill="#66182A"/>
+                        <rect x="0" y="34" width="200" height="16" fill="#66182A"/>
                         <text x="100" y="32" text-anchor="middle" font-family="DM Sans" font-size="12" font-weight="500" fill="white">JOB SEEKER</text>
                         
                         <!-- CV Input -->
                         <g transform="translate(15, 65)">
-                            <rect width="170" height="55" rx="8" fill="#F8F6F4"/>
-                            <text x="12" y="20" font-family="DM Sans" font-size="9" font-weight="500" fill="#2D936C">CV & BACKGROUND</text>
-                            <rect x="12" y="30" width="100" height="6" rx="2" fill="#E8E6E3"/>
-                            <rect x="12" y="40" width="80" height="6" rx="2" fill="#E8E6E3"/>
-                            <circle cx="150" cy="28" r="12" fill="#2D936C" fill-opacity="0.1"/>
-                            <path d="M146 28l3 3 5-5" stroke="#2D936C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <rect width="170" height="55" rx="8" fill="#F7F7F8"/>
+                            <text x="12" y="20" font-family="DM Sans" font-size="9" font-weight="500" fill="#66182A">CV & BACKGROUND</text>
+                            <rect x="12" y="30" width="100" height="6" rx="2" fill="#E9E9E9"/>
+                            <rect x="12" y="40" width="80" height="6" rx="2" fill="#E9E9E9"/>
+                            <circle cx="150" cy="28" r="12" fill="#66182A" fill-opacity="0.1"/>
+                            <path d="M146 28l3 3 5-5" stroke="#66182A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </g>
                         
                         <!-- Job Goals -->
                         <g transform="translate(15, 130)">
-                            <rect width="170" height="55" rx="8" fill="#F8F6F4"/>
-                            <text x="12" y="20" font-family="DM Sans" font-size="9" font-weight="500" fill="#2D936C">JOB GOALS</text>
-                            <rect x="12" y="30" width="70" height="6" rx="2" fill="#E8E6E3"/>
-                            <rect x="12" y="40" width="90" height="6" rx="2" fill="#E8E6E3"/>
-                            <circle cx="150" cy="28" r="12" fill="#2D936C" fill-opacity="0.1"/>
-                            <path d="M146 28l3 3 5-5" stroke="#2D936C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <rect width="170" height="55" rx="8" fill="#F7F7F8"/>
+                            <text x="12" y="20" font-family="DM Sans" font-size="9" font-weight="500" fill="#66182A">JOB GOALS</text>
+                            <rect x="12" y="30" width="70" height="6" rx="2" fill="#E9E9E9"/>
+                            <rect x="12" y="40" width="90" height="6" rx="2" fill="#E9E9E9"/>
+                            <circle cx="150" cy="28" r="12" fill="#66182A" fill-opacity="0.1"/>
+                            <path d="M146 28l3 3 5-5" stroke="#66182A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </g>
                         
                         <!-- Application System -->
                         <g transform="translate(15, 195)">
-                            <rect width="170" height="55" rx="8" fill="#F8F6F4"/>
-                            <text x="12" y="20" font-family="DM Sans" font-size="9" font-weight="500" fill="#2D936C">APPLICATION TRACKER</text>
-                            <rect x="12" y="30" width="40" height="18" rx="4" fill="#2D936C"/>
+                            <rect width="170" height="55" rx="8" fill="#F7F7F8"/>
+                            <text x="12" y="20" font-family="DM Sans" font-size="9" font-weight="500" fill="#66182A">APPLICATION TRACKER</text>
+                            <rect x="12" y="30" width="40" height="18" rx="4" fill="#66182A"/>
                             <text x="32" y="42" text-anchor="middle" font-family="DM Sans" font-size="8" fill="white">12</text>
-                            <text x="60" y="42" font-family="DM Sans" font-size="8" fill="#9A9894">sent</text>
-                            <rect x="90" y="30" width="40" height="18" rx="4" fill="#F4A261"/>
+                            <text x="60" y="42" font-family="DM Sans" font-size="8" fill="#7A8896">sent</text>
+                            <rect x="90" y="30" width="40" height="18" rx="4" fill="#BCA5AB"/>
                             <text x="110" y="42" text-anchor="middle" font-family="DM Sans" font-size="8" fill="white">3</text>
-                            <text x="135" y="42" font-family="DM Sans" font-size="8" fill="#9A9894">active</text>
+                            <text x="135" y="42" font-family="DM Sans" font-size="8" fill="#7A8896">active</text>
                         </g>
                         
                         <!-- Process Tracking -->
                         <g transform="translate(15, 260)">
-                            <rect width="170" height="45" rx="8" fill="#2D936C" fill-opacity="0.1"/>
-                            <text x="12" y="18" font-family="DM Sans" font-size="9" font-weight="500" fill="#2D936C">PROCESS STATUS</text>
-                            <circle cx="25" cy="32" r="6" fill="#2D936C"/>
-                            <circle cx="55" cy="32" r="6" fill="#2D936C"/>
-                            <circle cx="85" cy="32" r="6" fill="#F4A261"/>
-                            <circle cx="115" cy="32" r="6" fill="#E8E6E3"/>
-                            <circle cx="145" cy="32" r="6" fill="#E8E6E3"/>
+                            <rect width="170" height="45" rx="8" fill="#66182A" fill-opacity="0.1"/>
+                            <text x="12" y="18" font-family="DM Sans" font-size="9" font-weight="500" fill="#66182A">PROCESS STATUS</text>
+                            <circle cx="25" cy="32" r="6" fill="#66182A"/>
+                            <circle cx="55" cy="32" r="6" fill="#66182A"/>
+                            <circle cx="85" cy="32" r="6" fill="#BCA5AB"/>
+                            <circle cx="115" cy="32" r="6" fill="#E9E9E9"/>
+                            <circle cx="145" cy="32" r="6" fill="#E9E9E9"/>
                         </g>
                     </g>
                     
                     <!-- Data flow annotation -->
-                    <text x="320" y="230" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#2D936C">Structured</text>
-                    <text x="320" y="242" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#2D936C">data flow</text>
+                    <text x="320" y="230" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#66182A">Structured</text>
+                    <text x="320" y="242" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#66182A">data flow</text>
                     
                     <!-- ADVISOR DASHBOARD -->
                     <g transform="translate(430, 60)">
-                        <rect width="280" height="400" rx="16" fill="white" stroke="#2D936C" stroke-width="3"/>
-                        <rect x="0" y="0" width="280" height="50" rx="16" fill="#2D936C"/>
-                        <rect x="0" y="34" width="280" height="16" fill="#2D936C"/>
+                        <rect width="280" height="400" rx="16" fill="white" stroke="#66182A" stroke-width="3"/>
+                        <rect x="0" y="0" width="280" height="50" rx="16" fill="#66182A"/>
+                        <rect x="0" y="34" width="280" height="16" fill="#66182A"/>
                         <text x="140" y="32" text-anchor="middle" font-family="DM Sans" font-size="12" font-weight="500" fill="white">ADVISOR DASHBOARD</text>
                         
                         <!-- Activity Insights -->
                         <g transform="translate(15, 65)">
-                            <rect width="250" height="80" rx="10" fill="#F8F6F4"/>
-                            <text x="12" y="20" font-family="DM Sans" font-size="10" font-weight="500" fill="#1A1A1A">Job Search Activity</text>
-                            <text x="12" y="35" font-family="DM Sans" font-size="9" fill="#9A9894">Real-time, verified metrics</text>
+                            <rect width="250" height="80" rx="10" fill="#F7F7F8"/>
+                            <text x="12" y="20" font-family="DM Sans" font-size="10" font-weight="500" fill="#1B2045">Job Search Activity</text>
+                            <text x="12" y="35" font-family="DM Sans" font-size="9" fill="#7A8896">Real-time, verified metrics</text>
                             
                             <!-- Mini chart -->
                             <rect x="12" y="48" width="226" height="24" rx="4" fill="white"/>
-                            <rect x="16" y="60" width="20" height="8" rx="2" fill="#2D936C"/>
-                            <rect x="40" y="56" width="20" height="12" rx="2" fill="#2D936C"/>
-                            <rect x="64" y="52" width="20" height="16" rx="2" fill="#2D936C"/>
-                            <rect x="88" y="58" width="20" height="10" rx="2" fill="#2D936C"/>
-                            <rect x="112" y="54" width="20" height="14" rx="2" fill="#2D936C"/>
-                            <rect x="136" y="50" width="20" height="18" rx="2" fill="#F4A261"/>
-                            <rect x="160" y="52" width="20" height="16" rx="2" fill="#2D936C"/>
+                            <rect x="16" y="60" width="20" height="8" rx="2" fill="#66182A"/>
+                            <rect x="40" y="56" width="20" height="12" rx="2" fill="#66182A"/>
+                            <rect x="64" y="52" width="20" height="16" rx="2" fill="#66182A"/>
+                            <rect x="88" y="58" width="20" height="10" rx="2" fill="#66182A"/>
+                            <rect x="112" y="54" width="20" height="14" rx="2" fill="#66182A"/>
+                            <rect x="136" y="50" width="20" height="18" rx="2" fill="#BCA5AB"/>
+                            <rect x="160" y="52" width="20" height="16" rx="2" fill="#66182A"/>
                         </g>
                         
                         <!-- Career Graph -->
                         <g transform="translate(15, 155)">
-                            <rect width="250" height="70" rx="10" fill="#F8F6F4"/>
-                            <text x="12" y="20" font-family="DM Sans" font-size="10" font-weight="500" fill="#1A1A1A">Career Background Graph</text>
-                            <text x="12" y="35" font-family="DM Sans" font-size="9" fill="#9A9894">Skills, experience, trajectory</text>
+                            <rect width="250" height="70" rx="10" fill="#F7F7F8"/>
+                            <text x="12" y="20" font-family="DM Sans" font-size="10" font-weight="500" fill="#1B2045">Career Background Graph</text>
+                            <text x="12" y="35" font-family="DM Sans" font-size="9" fill="#7A8896">Skills, experience, trajectory</text>
                             
                             <!-- Network viz -->
-                            <circle cx="50" cy="55" r="8" fill="#2D936C"/>
-                            <circle cx="90" cy="48" r="6" fill="#2D936C" fill-opacity="0.6"/>
-                            <circle cx="120" cy="58" r="7" fill="#2D936C" fill-opacity="0.8"/>
-                            <circle cx="160" cy="50" r="5" fill="#2D936C" fill-opacity="0.5"/>
-                            <circle cx="200" cy="55" r="9" fill="#F4A261"/>
-                            <line x1="58" y1="55" x2="84" y2="50" stroke="#E8E6E3" stroke-width="1"/>
-                            <line x1="96" y1="50" x2="113" y2="55" stroke="#E8E6E3" stroke-width="1"/>
-                            <line x1="127" y1="58" x2="155" y2="52" stroke="#E8E6E3" stroke-width="1"/>
-                            <line x1="165" y1="52" x2="191" y2="55" stroke="#E8E6E3" stroke-width="1"/>
+                            <circle cx="50" cy="55" r="8" fill="#66182A"/>
+                            <circle cx="90" cy="48" r="6" fill="#66182A" fill-opacity="0.6"/>
+                            <circle cx="120" cy="58" r="7" fill="#66182A" fill-opacity="0.8"/>
+                            <circle cx="160" cy="50" r="5" fill="#66182A" fill-opacity="0.5"/>
+                            <circle cx="200" cy="55" r="9" fill="#BCA5AB"/>
+                            <line x1="58" y1="55" x2="84" y2="50" stroke="#E9E9E9" stroke-width="1"/>
+                            <line x1="96" y1="50" x2="113" y2="55" stroke="#E9E9E9" stroke-width="1"/>
+                            <line x1="127" y1="58" x2="155" y2="52" stroke="#E9E9E9" stroke-width="1"/>
+                            <line x1="165" y1="52" x2="191" y2="55" stroke="#E9E9E9" stroke-width="1"/>
                         </g>
                         
                         <!-- Anonymous Profile Generator -->
                         <g transform="translate(15, 235)">
-                            <rect width="250" height="75" rx="10" fill="#2D936C" fill-opacity="0.1" stroke="#2D936C" stroke-width="1" stroke-dasharray="4 2"/>
-                            <text x="12" y="22" font-family="DM Sans" font-size="10" font-weight="500" fill="#2D936C">Anonymous Profile</text>
-                            <text x="12" y="38" font-family="DM Sans" font-size="9" fill="#9A9894">K-anonymized for FFW platform</text>
+                            <rect width="250" height="75" rx="10" fill="#66182A" fill-opacity="0.1" stroke="#66182A" stroke-width="1" stroke-dasharray="4 2"/>
+                            <text x="12" y="22" font-family="DM Sans" font-size="10" font-weight="500" fill="#66182A">Anonymous Profile</text>
+                            <text x="12" y="38" font-family="DM Sans" font-size="9" fill="#7A8896">K-anonymized for FFW platform</text>
                             
-                            <rect x="12" y="48" width="100" height="20" rx="6" fill="#2D936C"/>
+                            <rect x="12" y="48" width="100" height="20" rx="6" fill="#66182A"/>
                             <text x="62" y="62" text-anchor="middle" font-family="DM Sans" font-size="9" fill="white">Push to FFW →</text>
                         </g>
                         
                         <!-- AI Insights -->
                         <g transform="translate(15, 320)">
-                            <rect width="250" height="65" rx="10" fill="#FEF3F3"/>
-                            <text x="12" y="20" font-family="DM Sans" font-size="10" font-weight="500" fill="#E63946">AI Pattern Insights</text>
-                            <text x="12" y="38" font-family="DM Sans" font-size="9" fill="#9A9894">"Similar profiles succeed 40% more</text>
-                            <text x="12" y="52" font-family="DM Sans" font-size="9" fill="#9A9894">with tech sector applications"</text>
+                            <rect width="250" height="65" rx="10" fill="#FFF6F6"/>
+                            <text x="12" y="20" font-family="DM Sans" font-size="10" font-weight="500" fill="#FF1E28">AI Pattern Insights</text>
+                            <text x="12" y="38" font-family="DM Sans" font-size="9" fill="#7A8896">"Similar profiles succeed 40% more</text>
+                            <text x="12" y="52" font-family="DM Sans" font-size="9" fill="#7A8896">with tech sector applications"</text>
                         </g>
                     </g>
                     
                     <!-- FALCK FUTURE WORKFORCE -->
                     <g transform="translate(780, 100)">
-                        <rect width="200" height="320" rx="16" fill="white" stroke="#E63946" stroke-width="2"/>
-                        <rect x="0" y="0" width="200" height="50" rx="16" fill="#E63946"/>
-                        <rect x="0" y="34" width="200" height="16" fill="#E63946"/>
+                        <rect width="200" height="320" rx="16" fill="white" stroke="#FF1E28" stroke-width="2"/>
+                        <rect x="0" y="0" width="200" height="50" rx="16" fill="#FF1E28"/>
+                        <rect x="0" y="34" width="200" height="16" fill="#FF1E28"/>
                         <text x="100" y="28" text-anchor="middle" font-family="DM Sans" font-size="10" font-weight="500" fill="white">FALCK FUTURE</text>
                         <text x="100" y="42" text-anchor="middle" font-family="DM Sans" font-size="10" font-weight="500" fill="white">WORKFORCE</text>
                         
                         <!-- Anonymous candidates -->
                         <g transform="translate(15, 65)">
-                            <rect width="170" height="80" rx="8" fill="#F8F6F4"/>
-                            <text x="12" y="18" font-family="DM Sans" font-size="9" font-weight="500" fill="#E63946">ANONYMOUS PROFILES</text>
+                            <rect width="170" height="80" rx="8" fill="#F7F7F8"/>
+                            <text x="12" y="18" font-family="DM Sans" font-size="9" font-weight="500" fill="#FF1E28">ANONYMOUS PROFILES</text>
                             
                             <!-- Profile cards -->
-                            <rect x="12" y="28" width="45" height="40" rx="6" fill="white" stroke="#E8E6E3"/>
-                            <circle cx="34" cy="42" r="8" fill="#E8E6E3"/>
-                            <rect x="22" y="55" width="24" height="4" rx="1" fill="#E8E6E3"/>
+                            <rect x="12" y="28" width="45" height="40" rx="6" fill="white" stroke="#E9E9E9"/>
+                            <circle cx="34" cy="42" r="8" fill="#E9E9E9"/>
+                            <rect x="22" y="55" width="24" height="4" rx="1" fill="#E9E9E9"/>
                             
-                            <rect x="62" y="28" width="45" height="40" rx="6" fill="white" stroke="#E8E6E3"/>
-                            <circle cx="84" cy="42" r="8" fill="#E8E6E3"/>
-                            <rect x="72" y="55" width="24" height="4" rx="1" fill="#E8E6E3"/>
+                            <rect x="62" y="28" width="45" height="40" rx="6" fill="white" stroke="#E9E9E9"/>
+                            <circle cx="84" cy="42" r="8" fill="#E9E9E9"/>
+                            <rect x="72" y="55" width="24" height="4" rx="1" fill="#E9E9E9"/>
                             
-                            <rect x="112" y="28" width="45" height="40" rx="6" fill="white" stroke="#E8E6E3"/>
-                            <circle cx="134" cy="42" r="8" fill="#E8E6E3"/>
-                            <rect x="122" y="55" width="24" height="4" rx="1" fill="#E8E6E3"/>
+                            <rect x="112" y="28" width="45" height="40" rx="6" fill="white" stroke="#E9E9E9"/>
+                            <circle cx="134" cy="42" r="8" fill="#E9E9E9"/>
+                            <rect x="122" y="55" width="24" height="4" rx="1" fill="#E9E9E9"/>
                         </g>
                         
                         <!-- Employer interactions -->
                         <g transform="translate(15, 155)">
-                            <rect width="170" height="70" rx="8" fill="#F8F6F4"/>
-                            <text x="12" y="18" font-family="DM Sans" font-size="9" font-weight="500" fill="#E63946">EMPLOYER ACTIVITY</text>
-                            <text x="12" y="35" font-family="DM Sans" font-size="9" fill="#9A9894">Views, saves, contacts</text>
+                            <rect width="170" height="70" rx="8" fill="#F7F7F8"/>
+                            <text x="12" y="18" font-family="DM Sans" font-size="9" font-weight="500" fill="#FF1E28">EMPLOYER ACTIVITY</text>
+                            <text x="12" y="35" font-family="DM Sans" font-size="9" fill="#7A8896">Views, saves, contacts</text>
                             
-                            <rect x="12" y="45" width="30" height="16" rx="4" fill="#E63946"/>
+                            <rect x="12" y="45" width="30" height="16" rx="4" fill="#FF1E28"/>
                             <text x="27" y="56" text-anchor="middle" font-family="DM Sans" font-size="8" fill="white">87</text>
-                            <text x="48" y="56" font-family="DM Sans" font-size="8" fill="#9A9894">views</text>
+                            <text x="48" y="56" font-family="DM Sans" font-size="8" fill="#7A8896">views</text>
                             
-                            <rect x="80" y="45" width="30" height="16" rx="4" fill="#F4A261"/>
+                            <rect x="80" y="45" width="30" height="16" rx="4" fill="#BCA5AB"/>
                             <text x="95" y="56" text-anchor="middle" font-family="DM Sans" font-size="8" fill="white">12</text>
-                            <text x="115" y="56" font-family="DM Sans" font-size="8" fill="#9A9894">saves</text>
+                            <text x="115" y="56" font-family="DM Sans" font-size="8" fill="#7A8896">saves</text>
                         </g>
                         
                         <!-- Feedback loop -->
                         <g transform="translate(15, 235)">
-                            <rect width="170" height="70" rx="8" fill="#2D936C" fill-opacity="0.1"/>
-                            <text x="12" y="18" font-family="DM Sans" font-size="9" font-weight="500" fill="#2D936C">MARKET FEEDBACK</text>
-                            <text x="12" y="35" font-family="DM Sans" font-size="9" fill="#9A9894">Back to advisor dashboard</text>
+                            <rect width="170" height="70" rx="8" fill="#66182A" fill-opacity="0.1"/>
+                            <text x="12" y="18" font-family="DM Sans" font-size="9" font-weight="500" fill="#66182A">MARKET FEEDBACK</text>
+                            <text x="12" y="35" font-family="DM Sans" font-size="9" fill="#7A8896">Back to advisor dashboard</text>
                             
                             <!-- Return arrow -->
-                            <path d="M85 50 L85 58 L50 58" stroke="#2D936C" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
-                            <text x="100" y="58" font-family="DM Sans" font-size="8" fill="#2D936C">insights</text>
+                            <path d="M85 50 L85 58 L50 58" stroke="#66182A" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+                            <text x="100" y="58" font-family="DM Sans" font-size="8" fill="#66182A">insights</text>
                         </g>
                         
                         <!-- Employer portal hint -->
                         <g transform="translate(15, 315)">
-                            <rect width="170" height="25" rx="6" fill="#1A1A1A"/>
-                            <text x="85" y="16" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#9A9894">450+ employer network</text>
+                            <rect width="170" height="25" rx="6" fill="#1B2045"/>
+                            <text x="85" y="16" text-anchor="middle" font-family="DM Sans" font-size="8" fill="#7A8896">450+ employer network</text>
                         </g>
                     </g>
                     
                     <!-- Feedback return arc -->
-                    <path d="M880 420 Q600 500 570 320" stroke="#2D936C" stroke-width="2" stroke-dasharray="6 4" fill="none" marker-end="url(#arrowGreen)"/>
-                    <text x="720" y="470" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#2D936C">Market response data</text>
-                    <text x="720" y="485" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#2D936C">feeds back to advisor</text>
+                    <path d="M880 420 Q600 500 570 320" stroke="#66182A" stroke-width="2" stroke-dasharray="6 4" fill="none" marker-end="url(#arrowGreen)"/>
+                    <text x="720" y="470" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#66182A">Market response data</text>
+                    <text x="720" y="485" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#66182A">feeds back to advisor</text>
                     
                     <!-- Legend -->
                     <g transform="translate(1050, 420)">
-                        <rect width="130" height="80" rx="8" fill="#F8F6F4"/>
-                        <text x="15" y="22" font-family="DM Sans" font-size="10" font-weight="500" fill="#1A1A1A">Data Flow</text>
-                        <circle cx="25" cy="40" r="4" fill="#2D936C"/>
-                        <text x="35" y="44" font-family="DM Sans" font-size="9" fill="#9A9894">Structured</text>
-                        <circle cx="25" cy="58" r="4" fill="#E63946"/>
-                        <text x="35" y="62" font-family="DM Sans" font-size="9" fill="#9A9894">Market feedback</text>
+                        <rect width="130" height="80" rx="8" fill="#F7F7F8"/>
+                        <text x="15" y="22" font-family="DM Sans" font-size="10" font-weight="500" fill="#1B2045">Data Flow</text>
+                        <circle cx="25" cy="40" r="4" fill="#66182A"/>
+                        <text x="35" y="44" font-family="DM Sans" font-size="9" fill="#7A8896">Structured</text>
+                        <circle cx="25" cy="58" r="4" fill="#FF1E28"/>
+                        <text x="35" y="62" font-family="DM Sans" font-size="9" fill="#7A8896">Market feedback</text>
                     </g>
                     
                     <defs>
                         <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-                            <path d="M0,0 L0,6 L9,3 z" fill="#2D936C"/>
+                            <path d="M0,0 L0,6 L9,3 z" fill="#66182A"/>
                         </marker>
                     </defs>
                 </svg>
@@ -1364,10 +1365,7 @@
             <div class="footer-inner">
                 <div class="footer-text">© 2025 Falck ELM Norway & Falck Karriere</div>
                 <div class="footer-brand">
-                    <svg viewBox="0 0 32 32" fill="none">
-                        <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.5"/>
-                        <path d="M16 8v8l6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                    </svg>
+                    <img src="data:image/png;base64,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" alt="" width="20" height="20" style="opacity:.55">
                     Falck Future Workforce
                 </div>
             </div>
